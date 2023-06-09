@@ -52,14 +52,14 @@ Var c As Color = c2.currentValue
 // If the System is in LightMode, the this set the LightColor to orange
 c2.currentValue = &cFF800000
 
-// If you need explizit the DarkColor
+// If you implicitly need access to the DarkColor
 c = c2.DarkColor
 
-// if you need explizit the LightColor
+// If you implicitly need access to the LightColor
 c = c2.LightColor
 
 
-// If you need the Colors as a string mayby for a preference
+// If you need the Colors as a string maybe for a preference
 Var s As String = c2.asText
 
 // this set the colors from a string
@@ -67,7 +67,7 @@ Var c3 As New WTEC_ColorGroup
 Try
   c3.asText = s
 Catch UnsupportedFormatException
-  MessageBox("Somethimg went wrong by set C3!")
+  MessageBox("Something went wrong by set C3!")
 End Try
 
 // Try to set a invalid ColorString 
@@ -76,8 +76,11 @@ Var i As String = "&cFF000000;&c0080FF00"
 Try
   c4.asText = i
 Catch UnsupportedFormatException
-  MessageBox("Somethimg went wrong by set C4!")
+  MessageBox("Something went wrong by set C4!")
 End Try
+
+
+
 ```
 
 ## History
